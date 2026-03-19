@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to fetch activities from API
   async function fetchActivities() {
     try {
-      const response = await fetch("/activities");
+      const response = await fetch("/activities?_t=" + Date.now());
       const activities = await response.json();
 
       // Clear loading message and reset select box
